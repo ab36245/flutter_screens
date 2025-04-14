@@ -1,6 +1,8 @@
-// import 'package:aivoice_common_base/log.dart';
+import 'package:flutter/widgets.dart';
 
-import '../../screen.dart';
+import '../screen/screen.dart';
+
+import 'view.dart';
 
 class Screens<S extends Screen> with ChangeNotifier {
   Screens(S init) {

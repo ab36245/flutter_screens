@@ -1,4 +1,4 @@
-import '../../screen.dart';
+import '../../flutter_screens.dart';
 
 class ScreensView extends StatelessWidget {
   const ScreensView(this.controller, {super.key});

@@ -1,4 +1,6 @@
-import '../../screen.dart';
+import 'package:flutter/widgets.dart';
+
+import 'screen.dart';
 
 class ScreenValue<T> extends ChangeNotifier {
   ScreenValue(this._screen, this._value);

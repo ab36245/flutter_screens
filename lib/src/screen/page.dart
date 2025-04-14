@@ -1,4 +1,7 @@
-import '../../screen.dart';
+import 'package:flutter/material.dart';
+
+import 'screen.dart';
+import 'transition.dart';
 
 class ScreenPage extends Page {
   ScreenPage(this.screen) : super(key: screen.key);

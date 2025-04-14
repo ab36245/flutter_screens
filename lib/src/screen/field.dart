@@ -1,4 +1,6 @@
-import '../../screen.dart';
+import 'package:flutter/material.dart';
+
+import 'screen.dart';
 
 class ScreenField {
   ScreenField(this._screen, [String value = ''])

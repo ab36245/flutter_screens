@@ -1,4 +1,7 @@
-import '../../screen.dart';
+import 'package:flutter/widgets.dart';
+
+import 'screen.dart';
+import 'value.dart';
 
 abstract class ScreenView<S extends Screen> extends StatelessWidget {
   const ScreenView(this.screen, {
