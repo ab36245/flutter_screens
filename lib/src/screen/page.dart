@@ -23,9 +23,9 @@ class ScreenPage extends Page {
       ScreenTransition.fade =>
         PageRouteBuilder(
           fullscreenDialog: true,
-          pageBuilder: (_, __, ___) => screen.view,
+          pageBuilder: (_, _, _) => screen.view,
           settings: this,
-          transitionsBuilder: (_, animation, __, child) =>
+          transitionsBuilder: (_, animation, _, child) =>
             FadeTransition(opacity: animation, child: child),
         ),
         
