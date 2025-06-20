@@ -7,7 +7,7 @@ class ScreensView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('Building listener');
+    // print('Building listener');
     return ListenableBuilder(
       listenable: controller,
       builder: _buildNavigator,
@@ -15,7 +15,7 @@ class ScreensView extends StatelessWidget {
   }
 
   Widget _buildNavigator(BuildContext context, Widget? child) {
-    print('Building navigator');
+    // print('Building navigator');
     return Navigator(
       pages: controller.pages,
       onDidRemovePage: _onDidRemovePage,
@@ -23,7 +23,7 @@ class ScreensView extends StatelessWidget {
   }
 
   void _onDidRemovePage(Page page) {
-    print('in _onDidRemovePage: page ${page.runtimeType}');
+    // print('in _onDidRemovePage: page ${page.runtimeType}');
     if (page is ScreenPage) {
       final screen = page.screen;
       // log.debug('$f: screen is $screen');
