@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/widgets.dart';
-// import 'package:aivoice_common_base/log.dart';
 
 import 'event.dart';
 import 'field.dart';
@@ -45,9 +44,7 @@ abstract class Screen extends ChangeNotifier {
   }
 
   Future<void> wait() async {
-    // log.debug('waiting for screen $this to finish');
     await events.drain();
-    // log.debug('screen $this is finished');
   }
 
   final _events = StreamController<ScreenEvent>();
