@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/widgets.dart';
 
-import 'event.dart';
 import 'field.dart';
 import 'page.dart';
 import 'transition.dart';
@@ -13,7 +12,7 @@ abstract class Screen extends ChangeNotifier {
   @override
   String toString() => '$runtimeType$key';
 
-  Stream<ScreenEvent> get events => _events.stream;
+  Stream<dynamic> get events => _events.stream;
 
   final key = UniqueKey();
 
@@ -23,14 +22,14 @@ abstract class Screen extends ChangeNotifier {
 
   Widget get view;
 
-  void close([ScreenEvent? last]) {
+  void close([dynamic last]) {
     if (last != null) {
       event(last);
     }
     _events.close();
   }
 
-  void event(ScreenEvent event) =>
+  void event(dynamic event) =>
     _events.add(event);
 
   ScreenField field([String initialValue = '']) =>
@@ -47,5 +46,5 @@ abstract class Screen extends ChangeNotifier {
     await events.drain();
   }
 
-  final _events = StreamController<ScreenEvent>();
+  final _events = StreamController<dynamic>();
 }

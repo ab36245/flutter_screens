@@ -1,6 +1,5 @@
 export 'package:flutter/material.dart';
 
-export 'src/screen/event.dart';
 export 'src/screen/field.dart';
 export 'src/screen/page.dart';
 export 'src/screen/screen.dart';
